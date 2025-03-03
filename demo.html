@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Text Animation</title>
+    <style>
+        
+        .floating-text {
+            /* font-size: 24px;
+            font-weight: bold;
+            color: #333; */
+            animation: floatAnimation 2s infinite ease-in-out;
+        }
+        @keyframes floatAnimation {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-text">This sentence is floating up and down!</div>
+</body>
+</html>
+
