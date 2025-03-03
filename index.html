@@ -890,31 +890,31 @@
               <a class="" href="#about-us">About Us</a>
           
           </li>
-          <li id="#link2" class="link_menu">
+          <li onclick="toggleNav()"  class="link_menu">
             <!-- <img class="arrow_menu" src="https://www.lebaroque.com/wp-content/themes/baroque/img/icons/big_arrow.svg" /> -->
             <div class="links_menu">
               <a class="split" href="#vtr-gold">Divisions</a>
             </div>
           </li>
-          <li id="#link3" class="link_menu">
+          <li onclick="toggleNav()"  class="link_menu">
             <!-- <img class="arrow_menu" src="https://www.lebaroque.com/wp-content/themes/baroque/img/icons/big_arrow.svg" /> -->
             <div class="links_menu">
               <a class="split" href="#our-careers">Careers</a>
             </div>
           </li>
-          <li id="#link4" class="link_menu">
+          <li onclick="toggleNav()"  class="link_menu">
             <!-- <img class="arrow_menu" src="https://www.lebaroque.com/wp-content/themes/baroque/img/icons/big_arrow.svg" /> -->
             <div class="links_menu">
               <a class="split" href="#our-awards">Awards & Achievements</a>
             </div>
           </li>
-          <li id="#link5" class="link_menu">
+          <li onclick="toggleNav()"   class="link_menu">
             <!-- <img class="arrow_menu" src="https://www.lebaroque.com/wp-content/themes/baroque/img/icons/big_arrow.svg" /> -->
             <div class="links_menu">
               <a class="split" href="#newsletter-blog">Newsletters & Blogs</a>
             </div>
           </li>
-          <li id="#link5" class="link_menu">
+          <li onclick="toggleNav()"   class="link_menu">
             <!-- <img class="arrow_menu" src="https://www.lebaroque.com/wp-content/themes/baroque/img/icons/big_arrow.svg" /> -->
             <div class="links_menu">
               <a class="split" href="#contact-us">Contact us </a>
@@ -931,12 +931,15 @@
               const navBar = document.getElementById("custom-menu");
               const bodayDiv = document.getElementById("body-div");
               navBar.style.opacity = navBar.style.opacity === "0" ? "1" : "0";
+              navBar.style.height = navBar.style.height === "100vh" ? "0" :"";
               bodayDiv.style.overflowY = bodayDiv.style.overflowY === "scroll";
               const icon = document.querySelector(".icon.active");
+              const btnDiv = document.querySelector(".btn_menu.active");
               const headerDiv = document.querySelector(".globNav.black_nav");
               const navDiv = document.querySelector(".custom-menu.active");
             if (icon) {
                 icon.classList.remove("active");
+                btnDiv.classList.remove("active");
                 headerDiv.classList.remove("black_nav");
                 navDiv.classList.remove("active");
             }
