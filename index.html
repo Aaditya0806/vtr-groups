@@ -5923,6 +5923,8 @@
             if (error) {
                 console.error("File upload error:", error);
                 alert("Failed to upload file.");
+                const submitButton = document.getElementById("career-submit"); // Get button
+                submitButton.textContent = "Send";
                 return;
             }
 
