@@ -1214,6 +1214,26 @@
               </div>
             </div>
           </div>
+          <style>
+            .phoneView{
+              display: block;
+            }
+            .mobileView{
+              display: none;
+            }
+            @media (max-width:768px) {
+              .content_concept h6{
+                
+            text-align: center;
+          }
+              .phoneView{
+              display: none;
+            }
+            .mobileView{
+              display: block;
+            } 
+            }
+          </style>
           <section class="content" id="content">
             <div class="about_us bg_grey" style="padding: 50px 0" id="about-us">
               <div class="bg_light">
@@ -1227,6 +1247,29 @@
               </div>
               <div class="container_right" style="float: none; margin: auto">
                 <div class="row justify-content-between">
+                  <div
+                  class="col-12 col-md-5 col-lg-5 wow fadeInUp mobileView"
+                  data-wow-duration="1s"
+                  data-wow-delay=".5s"
+                  style="
+                    visibility: visible;
+                    animation-duration: 1s;
+                    animation-delay: 0.5s;
+                    animation-name: fadeInUp;
+                  "
+                >
+                  <div
+                    class="content_concept"
+                    style="
+                      padding-top: 20px;
+                      max-width: 100%;
+                      padding-left: 0px;
+                      width: 100%;
+                    "
+                  >
+                    <h6>ABOUT US</h6>
+                  
+                  </div>
                   <div
                     class="col-md-6 col-lg-6 wow fadeInUp"
                     data-wow-duration="1s"
@@ -1270,7 +1313,7 @@
         }
                   </style>
                   <div
-                    class="col-md-5 col-lg-5 wow fadeInUp"
+                    class="col-md-5 col-lg-5 wow fadeInUp phoneView"
                     data-wow-duration="1s"
                     data-wow-delay=".5s"
                     style="
@@ -2022,7 +2065,23 @@
               </div>
             </div>
 
-
+            <style>
+              #vtr-logo{
+                width: 280px;
+              }
+              .details_restaurant p{
+                text-align: justify;
+              }
+              @media (max-width: 768px) {
+                #vtr-logo{
+                width: 150px;
+              }
+              .about_res{
+                order: 0;
+              }
+             
+              }
+            </style>
             <section
               class="content"
               id="content"
@@ -2070,19 +2129,7 @@
                         animation-name: fadeInUp;
                       "
                     >
-                    <style>
-                      #vtr-logo{
-                        width: 280px;
-                      }
-                      .details_restaurant p{
-                        text-align: justify;
-                      }
-                      @media (max-width: 768px) {
-                        #vtr-logo{
-                        width: 150px;
-                      }
-                      }
-                    </style>
+                   
                       <div class="row">
                         <div class="col-3 icon_rest">
                           <img
@@ -3391,7 +3438,7 @@
                         stroke="#FFF"
                         stroke-width="0.5"
                       /></svg  ><label class="lab_gold"
-                      ><span class="txt_btn">EXPLORE MORE</span>
+                      ><span class="txt_btn">SOKOS CAFE</span>
                     </label>
                   </a>
                 </div>
