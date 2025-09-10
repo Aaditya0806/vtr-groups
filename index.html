@@ -570,6 +570,7 @@
       media="all"
     /> -->
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style-cache.css">
     <link
       rel="stylesheet"
       id="baroque_theme_custom-css"
@@ -666,10 +667,21 @@
         /* Adjust as needed */
         background-position: center;
       }
-
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 0 !important;
+}
     </style>
-  </head>
+    <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <body id="body-div">
     <!--header turbelance!-->
     <svg class="turbelance_effect1">
@@ -782,7 +794,7 @@
           display: flex !important;
         }
         #vtr-group-text{
-        margin-top: -70px;
+        margin-top:100px;
       }
         .menu_head ul {
         grid-template-columns: 7fr 1fr 1fr 1fr 2fr 2fr 1fr;
@@ -793,7 +805,7 @@
 
       }
     </style>
-    <header class="globNav" style="position: relative;">
+    <header class="globNav" style="position: relative; background-color: #030814;">
       <div class="fluid-container">
         <div class="menu_head">
           <ul>
@@ -960,11 +972,11 @@
       </div>
     </nav> 
     <!--custom loader !-->
-    <div id="loader">
+    <!-- <div id="loader">
       <div class="loader-slide">
         <div class="center"></div>
       </div>
-    </div>
+    </div> -->
     <div id="scroll-animate">
       <div id="scroll-animate-main">
         <div class="wrapper-parallax">
@@ -987,6 +999,38 @@
                     <!-- <source src="https://www.lebaroque.com/wp-content/uploads/2022/08/Video.mp4" type="video/mp4" /> -->
                   </video>
                 </div>
+                <style>
+  /* put in your CSS */
+.turb1,
+.turb2,
+.turb3,
+.turb4 {
+  stroke-dasharray: 1200;   /* bigger than path length */
+  stroke-dashoffset: 0;
+  animation: dashmove 6s linear infinite;
+}
+
+.turb2 {
+  animation-duration: 8s;
+}
+.turb3 {
+  animation-duration: 9s;
+}
+.turb4 {
+  animation-duration: 10s;
+}
+
+@keyframes dashmove {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -2400; /* negative moves the dash forward */
+  }
+}
+
+
+                </style>
                 <div class="content_cover">
                   <div class="container d-block">
                     <div class="row row_cover">
@@ -1404,7 +1448,7 @@
 
             <section class="content" id="content">
               <div class="about_us bg_grey pb_64">
-                <div class="bg_light">
+                <!-- <div class="bg_light">
                   <img
                     data-src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle1.svg"
                     class="cercle1 lazy"
@@ -1423,7 +1467,7 @@
                     "
                     src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle2.svg"
                   />
-                </div>
+                </div> -->
                 <style>
                   #vision-mission {
                     padding-top: 80px;
@@ -2137,7 +2181,7 @@
               "
             >
               <div class="about_us nopad_mobile" id="vtr-gold">
-                <div class="bg_light">
+                <!-- <div class="bg_light">
                   <img
                     data-src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle1.svg"
                     class="cercle1 lazy"
@@ -2156,7 +2200,7 @@
                     "
                     src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle2.svg"
                   />
-                </div>
+                </div> -->
 
                 <div
                   class="container_80 pt_190 mb_80 pt1_mobile"
@@ -2504,7 +2548,7 @@
               "
             >
               <div class="about_us pb_64 nopad_mobile" id="vtr-hospitality">
-                <div class="bg_light">
+                <!-- <div class="bg_light">
                   <img
                     data-src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle1.svg"
                     class="cercle1 lazy"
@@ -2523,7 +2567,7 @@
                     "
                     src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle2.svg"
                   />
-                </div>
+                </div> -->
 
                 <div
                   class="container_80 mb_80 pt1_mobile"
@@ -3218,7 +3262,7 @@
                   <div class="bigtxt_hover">
                     <h1 class="big_txt anime_text">HEADLINES WTC</h1>
                   </div>
-                  <h1 class="small_txt anime_text">HEADLINES WTC</h1>
+                  <!-- <h1 class="small_txt anime_text">HEADLINES WTC</h1> -->
                 </div>
                 <div class="cont_desc">
                   <p id="our-initiative-d" class="anime_text">
@@ -3316,7 +3360,7 @@
                   <div class="bigtxt_hover">
                     <h1 class="big_txt anime_text">HEADLINES JUMEIRAH</h1>
                   </div>
-                  <h1 class="small_txt anime_text">HEADLINES JUMEIRAH</h1>
+                  <!-- <h1 class="small_txt anime_text">HEADLINES JUMEIRAH</h1> -->
                 </div>
                 <div class="cont_desc">
                   <p id="our-initiative-d"  class="anime_text">
@@ -3412,7 +3456,7 @@
                   <div class="bigtxt_hover">
                     <h1 class="big_txt anime_text">SOKOS CAFE</h1>
                   </div>
-                  <h1 class="small_txt anime_text">SOKOS CAFE</h1>
+                  <!-- <h1 class="small_txt anime_text">SOKOS CAFE</h1> -->
                 </div>
                 <div class="cont_desc">
                   <p id="our-initiative-d"  class="anime_text">
@@ -3508,7 +3552,7 @@
               "
             >
               <div class="about_us nopad_mobile" id="#vtr-developer">
-                <div class="bg_light">
+                <!-- <div class="bg_light">
                   <img
                     data-src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle1.svg"
                     class="cercle1 lazy"
@@ -3527,7 +3571,7 @@
                     "
                     src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle2.svg"
                   />
-                </div>
+                </div> -->
 
                 <div
                   class="container_80 pt_190 mb_80 pt1_mobile"
@@ -3839,7 +3883,7 @@
               "
             >
               <div class="about_us nopad_mobile" id="vtr-investment">
-                <div class="bg_light">
+                <!-- <div class="bg_light">
                   <img
                     data-src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle1.svg"
                     class="cercle1 lazy"
@@ -3858,7 +3902,7 @@
                     "
                     src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle2.svg"
                   />
-                </div>
+                </div> -->
 
                 <div
                   class="container_80 pt_190 mb_80 pt1_mobile"
@@ -4173,7 +4217,7 @@
               "
             >
               <div class="about_us nopad_mobile" id="vtr-travel">
-                <div class="bg_light">
+                <!-- <div class="bg_light">
                   <img
                     data-src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle1.svg"
                     class="cercle1 lazy"
@@ -4192,7 +4236,7 @@
                     "
                     src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle2.svg"
                   />
-                </div>
+                </div> -->
 
                 <div
                   class="container_80 pt_190 mb_80 pt1_mobile"
@@ -5141,7 +5185,7 @@
               style="padding-top: 80px"
             >
               <div class="about_us bg_grey pb_64" id="newsletter-blog">
-                <div class="bg_light">
+                <!-- <div class="bg_light">
                   <img
                     data-src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle1.svg"
                     class="cercle_e1 lazy"
@@ -5150,7 +5194,7 @@
                     class="cercle_e2"
                     src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle2.svg"
                   />
-                </div>
+                </div> -->
                 <div class="container_100">
                   <div class="row">
                     <div
@@ -5189,7 +5233,7 @@
                           animation-name: fadeInUp;
                         "
                       >
-                        <a class="link_card_news" target="_blank" href="/discover-dubai's-best-nightlife/">
+                        <a style="text-decoration: none;" class="link_card_news" target="_blank" href="#firstEdition">
                           <div class="card_news">
                             <div class="reveal animating">
                               <div class="image-wrap">
@@ -5210,9 +5254,9 @@
                           </h3>
                           <!-- <p>Blog Details</p> -->
                         </a>
-                        <div class="btn_card" id="contact-us">
-                          <a class="link_card_news" href="/discover-dubai's-best-nightlife/"> </a
-                          ><a class="btn_section" target="_blank " href="/discover-dubai's-best-nightlife/">
+                        <div class="btn_card" id="contact-us" style="opacity: 1;">
+                          <a class="link_card_news" href="#firstEdition"> </a
+                          ><a class="btn_section" target="_blank " href="#firstEdition">
                             <span class="btn_card">
                               <span
                                 class="text_btn"
@@ -5634,7 +5678,7 @@
                             alt=""
                           />
                         </div>
-                        <div class="col-6 text-right">
+                        <div class="col-6 text-right" style="display: flex; justify-content: end;">
                           <a href class="back_top"
                             ><svg
                               width="56"
@@ -5659,7 +5703,7 @@
                               /></svg  ></a>
                         </div>
                       </div>
-                      <div class="col_links_foo">
+                      <div class="col_links_foo" style="border-bottom: 1px solid white; border-top:  1px solid white">
                         <div class="progress_foo">
                           <div class="progress-value"></div>
                         </div>
@@ -5773,13 +5817,13 @@
                         <div class="col-md-3 footer-links" >
                           <ul class="heading foo_links">
                             <li>
-                              <a href="#"><span class="anime_text">ABOUT US </span></a>
+                              <a href="#about-us"><span class="">ABOUT US </span></a>
                             </li>
                             <li>
-                              <a href=""><span class="anime_text">AWARDS </span></a>
+                              <a href="#our-awards"><span class="">AWARDS </span></a>
                             </li>
                             <li>
-                              <a href=""><span class="anime_text">CAREERS </span></a>
+                              <a href="content"><span class="">CAREERS </span></a>
                             </li>
                           
                             
@@ -5788,13 +5832,13 @@
                         <div class="col-md-3">
                           <ul class="heading foo_links">
                             <li>
-                              <a href=""><span class="anime_text">CONTACT: </span></a>
+                              <a href=""><span class="">CONTACT: </span></a>
                             </li>
                             <li>
-                              <a href=""><span class="anime_text">+971 4 325 7114 </span></a>
+                              <a href=""><span class="">+971 4 325 7114 </span></a>
                             </li>
                             <li>
-                              <a href=""><span class="anime_text"> 
+                              <a href=""><span class=""> 
                                 info@vtr-group.ae
                                  </span></a>
                             </li>
@@ -6218,6 +6262,27 @@ document.getElementById('join-form').addEventListener('click', async (e) => {
   }
 });
     </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".swiper_gallery", {
+      loop: true, // infinite loop
+      slidesPerView: 1, // one image at a time
+      spaceBetween: 0,
+      speed: 600,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      // enable touch/drag on mobile
+      grabCursor: true,
+    });
+  });
+</script>
 
 
 
