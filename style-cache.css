@@ -6141,7 +6141,7 @@ body,html {
     margin: auto;
     transition-duration: .8s;
     transition-delay: .8s;
-    opacity: 0!important
+    opacity: 1!important
 }
 
 .container_flexgrow .section_grow:last-child {
@@ -6244,7 +6244,7 @@ body,html {
     right: 0;
     margin: auto;
     z-index: 2;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s,transform 1s,padding-top .9s
 }
 

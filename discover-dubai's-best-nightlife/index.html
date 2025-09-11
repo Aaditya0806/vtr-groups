@@ -681,6 +681,14 @@
         background-size: contain; /* Adjust as needed */
         background-position: center;
       }
+      .swiper-button-next:after, .swiper-button-prev:after{
+        font-size: 0 !important;
+      }
+      .custom-menu.active {
+  z-index: 100;
+  height: 100vh;
+  opacity: 1;
+}
     </style>
 
     <link rel="stylesheet" href="/style.css">
@@ -822,166 +830,151 @@
   
         }
       </style>
-    <header class="globNav" style="position: relative;">
-        <div class="fluid-container">
-          <div class="menu_head">
-            <ul>
-              <li class="logo_head">
-                <a href="/" class="logo">
-                  <img
-                    style="width: 120px; height: 60px"
-                    src="/assest/logo/VTR GROUP LOGO_Gold.png"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li class="link_head">
-                <div>
-                  <a href="/#about-us"> ABOUT US</a>
-                </div>
-              </li>
-              <li class="link_head dropdownn" style="">
-                <div>
-                  <a href="/#our-companies"> DIVISIONS</a>
-                 
-                </div>
-                <div class="dropdown-content">
-                
-                <ul style="display: flex; flex-direction: column; gap: 15px; padding: 30px 0 30px 0;">
-                  <li class="link_head" style="border-top:1px solid  #000000; padding-top: 10px;">
-                    <div>
-                      <a href="/#vtr-developer" style="color: #000000;"> VTR DEVELOEPRS</a>
-                    </div>
-                  </li>
-                  <li class="link_head" >
-                    <div>
-                      <a href="/#vtr-gold" style="color: #000000;"> VTR GOLD & DIAMOND</a>
-                    </div>
-                  </li>
-                  <li class="link_head" >
-                    <div>
-                      <a href="/#vtr-travel" style="color: #000000;"> VTR TRAVEL & TOURISM</a>
-                    </div>
-                  </li>
-                  <li class="link_head">
-                    <div>
-                      <a href="/#vtr-hospitality" style="color: #000000;"> VTR HOSPITALITY & EVENTS</a>
-                    </div>
-                  </li>
-               
-                  <li class="link_head" style="border-bottom:1px solid  #000000; padding-bottom: 10px;">
-                    <div>
-                      <a href="/#vtr-investment" style="color: #000000;"> VTR INVESTMENT CONSULTANCY </a>
-                    </div>
-                  </li>
-                 
-                </ul>
-                <hr>
+    <header class="globNav" style="position: relative; ">
+      <div class="fluid-container">
+        <div class="menu_head">
+          <ul>
+            <li class="logo_head">
+              <a href="/" class="logo">
+                <img
+                  style="width: 120px; height: 60px"
+                  src="/assest/logo/VTR GROUP LOGO_Gold.png"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="link_head">
+              <div>
+                <a href="/#about-us"> ABOUT US</a>
               </div>
-              </li>
-              <li class="link_head">
-                <div>
-                  <a href="/#our-careers"> Careers </a>
-                </div>
-              </li>
-              <li class="link_head">
-                <div>
-                  <a href="/#our-awards"> Awards & Achievements </a>
-                </div>
-              </li>
-  
-              <li class="link_head">
-                <div>
-                  <a href="/#newsletter-blog"> Newsletter & blogs</a>
-                </div>
-              </li>
-              <li class="link_head">
-                <div>
-                  <a href="/#contact-us"> Contact us</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="right-element" id="menu-bar">
-            <div class="button-container">
-              <button class="btn_menu" toggle-menu>
-                <div class="icon">
-                  <div class="burger"></div>
-                </div>
-              </button>
+            </li>
+            <li class="link_head dropdownn" style="">
+              <div>
+                <a href="/#our-companies"> DIVISIONS</a>
+               
+              </div>
+              <div class="dropdown-content">
+              
+              <ul style="display: flex; flex-direction: column; gap: 15px; padding: 30px 0 30px 0;">
+                <li class="link_head" style="border-top:1px solid  #000000; padding-top: 10px;">
+                  <div>
+                    <a href="/#vtr-developer" style="color: #000000;"> VTR DEVELOEPRS</a>
+                  </div>
+                </li>
+                <li class="link_head" >
+                  <div>
+                    <a href="/#vtr-gold" style="color: #000000;"> VTR GOLD & DIAMOND</a>
+                  </div>
+                </li>
+                <li class="link_head" >
+                  <div>
+                    <a href="/#vtr-travel" style="color: #000000;"> VTR TRAVEL & TOURISM</a>
+                  </div>
+                </li>
+                <li class="link_head">
+                  <div>
+                    <a href="/#vtr-hospitality" style="color: #000000;"> VTR HOSPITALITY & EVENTS</a>
+                  </div>
+                </li>
+             
+                <li class="link_head" style="border-bottom:1px solid  #000000; padding-bottom: 10px;">
+                  <div>
+                    <a href="/#vtr-investment" style="color: #000000;"> VTR INVESTMENT CONSULTANCY </a>
+                  </div>
+                </li>
+               
+              </ul>
+              <hr>
             </div>
-          </div>
-        </div>
-        <div class="bg_svg">
-          <div class="border_header"></div>
-        </div>
-  
-                   
-      </header>
-    <!--custom navigation header !-->
-    <nav class="custom-menu" id="custom-menu">
-        <div class="container_nav">
-          <div class="menu-container" >
-            <ul class="big_menu">
-            <li onclick="toggleNav()" class="link_menu">
-            
-             
-                <a class="" href="#about-us">About Us</a>
-            
             </li>
-            <li onclick="toggleNav()"  class="link_menu">
-             
-                <a  href="#vtr-gold">Divisions</a>
-         
+            <li class="link_head">
+              <div>
+                <a href="/#our-careers"> Careers </a>
+              </div>
             </li>
-            <li onclick="toggleNav()"  class="link_menu">
-              
-                <a  href="#our-careers">Careers</a>
+            <li class="link_head">
+              <div>
+                <a href="/#our-awards"> Awards & Achievements </a>
+              </div>
+            </li>
+
+            <li class="link_head">
+              <div>
+                <a href="/#newsletter-blog"> Newsletter & blogs</a>
+              </div>
+            </li>
            
-            </li>
-            <li onclick="toggleNav()"  class="link_menu">
-            
-                <a href="#our-awards">Awards & Achievements</a>
-              
-            </li>
-            <li onclick="toggleNav()"   class="link_menu">
-              
-                <a  href="#newsletter-blog">Newsletters & Blogs</a>
-            
-            </li>
-            <li onclick="toggleNav()"   class="link_menu">
-            
-                <a  href="#contact-us">Contact us </a>
-            
+            <li class="link_head">
+              <div>
+                <a href="/#contact-us"> Contact us</a>
+              </div>
             </li>
           </ul>
-            <ul>
-              
-            </ul>
-          </div>
-        
-          <script>
-            function toggleNav() {
-                const navBar = document.getElementById("custom-menu");
-                const bodayDiv = document.getElementById("body-div");
-                navBar.style.opacity = navBar.style.opacity === "0" ? "1" : "0";
-                navBar.style.height = navBar.style.height === "100vh" ? "0" :"";
-                bodayDiv.style.overflowY = bodayDiv.style.overflowY === "scroll";
-                const icon = document.querySelector(".icon.active");
-                const btnDiv = document.querySelector(".btn_menu.active");
-                const headerDiv = document.querySelector(".globNav.black_nav");
-                const navDiv = document.querySelector(".custom-menu.active");
-              if (icon) {
-                  icon.classList.remove("active");
-                  btnDiv.classList.remove("active");
-                  headerDiv.classList.remove("black_nav");
-                  navDiv.classList.remove("active");
-              }
-            }
-        </script>
-       
         </div>
-      </nav>
+        <div class="right-element" id="menu-bar">
+          <div class="button-container">
+            <button class="btn_menu" toggle-menu>
+              <div class="icon">
+                <div class="burger"></div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg_svg">
+        <div class="border_header"></div>
+      </div>
+
+                 
+    </header>
+    <!--custom navigation header !-->
+
+    <nav class="custom-menu" id="custom-menu" style="background-color: #030814;">
+  <div class="container_nav">
+    <div class="menu-container">
+      <ul class="big_menu">
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="/#about-us">About Us</a>
+        </li>
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="/#vtr-gold">Divisions</a>
+        </li>
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="/#our-careers">Careers</a>
+        </li>
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="/#our-awards">Awards & Achievements</a>
+        </li>
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="/#newsletter-blog">Newsletters & Blogs</a>
+        </li>
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="/#contact-us">Contact us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  const menuBtn = document.querySelector("#menu-bar"); // your hamburger icon
+  const menu = document.querySelector("#custom-menu");
+
+  // click on the hamburger to open/close
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    // optionally prevent body scrolling
+    document.body.style.overflow = menu.classList.contains("active")
+      ? "hidden"
+      : "auto";
+  });
+
+  // when clicking on any menu link, close the menu
+  function toggleNav() {
+    console.log("wewobject")
+    menu.classList.remove("active");
+    document.body.style.overflow = "auto"; // re-enable scroll
+  }
+</script>
     <!--custom loader !-->
     <!-- <div id="loader">
       <div class="loader-slide">
@@ -1280,11 +1273,11 @@
                                   class="swiper-container swiper_gallery swiper-container-initialized swiper-container-horizontal"
                                 >
                                 <style>
-                                  #event-img-div{
-                                     height: 590px;
+                                  #event-img-div,.swiper-slide{
+                                     height: 550px;
                                   }
                                   .hero-slider .swiper-button-next, .hero-slider .swiper-button-prev{
-                                    margin-top: 20%;
+                                    margin-top: 30%;
                                   }
                 
                                   @media (max-width:768px) {
@@ -1984,7 +1977,7 @@ document.getElementById('join-form').addEventListener('click', async (e) => {
   }
 });
     </script>
-    <!-- <script>
+    <script>
   document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".swiper_gallery", {
       loop: true, 
@@ -2003,7 +1996,7 @@ document.getElementById('join-form').addEventListener('click', async (e) => {
       grabCursor: true,
     });
   });
-</script> -->
+</script>
   </body>
 
   

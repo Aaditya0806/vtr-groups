@@ -789,7 +789,28 @@
       #vtr-group-text{
         margin-top: 0;
       }
+      .globNav{
+     background-color: #030814;
+      }
+      .rc-anchor-content , .rc-anchor-content{
+        display: none !important;
+      }
+      .rc-anchor-normal .rc-anchor-content{
+        display: none !important;
+      }
+      #rc-anchor-container{
+        display: none !important;
+      }
+      #imgMainDiv{
+        width: 500px;
+      }
       @media (max-width: 768px) {
+              #imgMainDiv{
+        width: 200px;
+      }
+         .globNav{
+     background-color: white;
+      }
         .globNav .fluid-container .right-element {
           display: flex !important;
         }
@@ -802,10 +823,14 @@
       .burger::after, .burger::before {
         background-color: #000000;
       }
-
+.custom-menu.active {
+  z-index: 100;
+  height: 100vh;
+  opacity: 1;
+}
       }
     </style>
-    <header class="globNav" style="position: relative; background-color: #030814;">
+    <header class="globNav" style="position: relative;">
       <div class="fluid-container">
         <div class="menu_head">
           <ul>
@@ -833,7 +858,7 @@
               <ul style="display: flex; flex-direction: column; gap: 15px; padding: 30px 0 30px 0;">
                 <li class="link_head" style="border-top:1px solid  #000000; padding-top: 10px;">
                   <div>
-                    <a href="#vtr-developer" style="color: #000000;"> VTR DEVELOEPRS</a>
+                    <a href="#vtr-developer" style="color: #000000;"> VTR DEVELOPERS</a>
                   </div>
                 </li>
                 <li class="link_head" >
@@ -843,7 +868,7 @@
                 </li>
                 <li class="link_head" >
                   <div>
-                    <a href="#vtr-travel" style="color: #000000;"> VTR TRAVEL & TOURISM</a>
+                    <a href="#vtr-cars" style="color: #000000;"> VTR CARS</a>
                   </div>
                 </li>
                 <li class="link_head">
@@ -903,7 +928,55 @@
                  
     </header>
     <!--custom navigation header !-->
-   <nav class="custom-menu" id="custom-menu">
+
+    <nav class="custom-menu" id="custom-menu">
+  <div class="container_nav">
+    <div class="menu-container">
+      <ul class="big_menu">
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="#about-us">About Us</a>
+        </li>
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="#vtr-gold">Divisions</a>
+        </li>
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="#our-careers">Careers</a>
+        </li>
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="#our-awards">Awards & Achievements</a>
+        </li>
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="#newsletter-blog">Newsletters & Blogs</a>
+        </li>
+        <li onclick="toggleNav()" class="link_menu">
+          <a href="#contact-us">Contact us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  const menuBtn = document.querySelector("#menu-bar"); // your hamburger icon
+  const menu = document.querySelector("#custom-menu");
+
+  // click on the hamburger to open/close
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    // optionally prevent body scrolling
+    document.body.style.overflow = menu.classList.contains("active")
+      ? "hidden"
+      : "auto";
+  });
+
+  // when clicking on any menu link, close the menu
+  function toggleNav() {
+    console.log("wewobject")
+    menu.classList.remove("active");
+    document.body.style.overflow = "auto"; // re-enable scroll
+  }
+</script>
+
+   <!-- <nav class="custom-menu" id="custom-menu">
       <div class="container_nav">
         <div class="menu-container" >
           <ul class="big_menu">
@@ -933,11 +1006,7 @@
               <a  href="#newsletter-blog">Newsletters & Blogs</a>
           
           </li>
-          <!-- <li onclick="toggleNav()"   class="link_menu">
-            
-              <a  href="#newsletter-blog">Community</a>
-          
-          </li> -->
+        
           <li onclick="toggleNav()"   class="link_menu">
           
               <a  href="#contact-us">Contact us </a>
@@ -950,6 +1019,12 @@
         </div>
       
         <script>
+          const menuBtn = document.querySelector("#menu-bar");
+  const menu = document.querySelector(".custom-menu");
+           menuBtn.addEventListener("click", () => {
+            console.log("object")
+    menu.classList.toggle("active");
+  });
           function toggleNav() {
               const navBar = document.getElementById("custom-menu");
               const bodayDiv = document.getElementById("body-div");
@@ -970,7 +1045,7 @@
       </script>
      
       </div>
-    </nav> 
+    </nav>  -->
     <!--custom loader !-->
     <!-- <div id="loader">
       <div class="loader-slide">
@@ -1040,9 +1115,10 @@
                       >
                         <!-- <h6 class="lab_cover"><a style="color: white ; text-decoration: none;" target="_blank"
                           href="https://www.vtr-group.ae">vtr-group.ae</a></h6> -->
-                        <h1 style="max-width: 100%" class="text_cover">
+                        <!-- <h1 style="max-width: 100%" class="text_cover">
                           VTR Group
-                        </h1>
+                        </h1> -->
+                        <img id="imgMainDiv"  src="/assest/logo/VTR GROUP LOGO_White.png" alt="">
                         <div
                           class="cover__button gold_btn"
                           data-button-svg
@@ -1422,8 +1498,8 @@
                           VTR Group is a dynamic and diversified business
                           conglomerate with a strong presence across diverse
                           industries. With a commitment to excellence and
-                          innovation, we specialize in Gold Bullion Trading,
-                          Hospitality & Event Management, Travel & Tourism, Real
+                          innovation, we specialize in physical gold ,
+                          Hospitality & Event Management, Real
                           Estate, and Investment Consultancy. Our expertise,
                           coupled with a customer-centric approach, enables us
                           to deliver top-tier services that cater to the
@@ -1843,7 +1919,7 @@
                             ></p>
                             <p style="width: 95%;">
                               <span style="font-size: 18px"
-                                >Golden Goose Dubai Office
+                                >VTR Investment Consultancy Dubai
 
                                 <br />
 
@@ -1899,7 +1975,7 @@
                             ></p>
                             <p style="width: 95%;">
                               <span style="font-size: 18px">
-                                Golden Goose Mauritius Office
+                                VTR Investment Consultancy,
 
                                 <br />
 
@@ -2315,11 +2391,7 @@
                         <p></p>
                         <p>
                           <span style="font-size: 18px; color: white"
-                            >VTR Gold & Diamond has been a trusted name in the
-                            industry for many years and is the leading precious
-                            metals trading company in Dubai. The team has been
-                            carefully trained in the art of identifying, testing
-                            and analysing precious metals and gemstones.</span
+                            >VTR GOLD is known for its wide range of gold and silver trading and subsequent services to meet the expectations of customers. We have created our goodwill among customers by providing timely services aligned with conformities. We empower our customers by offering competitive prices and reliable services that enable our customers to pass on significant margins to end customers. And we value our customers and suppliers.</span
                           >
                         </p>
                       </div>
@@ -4211,12 +4283,12 @@
               class="content"
               id="content"
               style="
-                background-image: url('/assest/travel-bg.jpg');
+                background-image: url('/assest/vtr-cars/classic-vintage-car-in-dubai.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
               "
             >
-              <div class="about_us nopad_mobile" id="vtr-travel">
+              <div class="about_us nopad_mobile" id="vtr-cars">
                 <!-- <div class="bg_light">
                   <img
                     data-src="https://www.lebaroque.com/wp-content/themes/baroque/assets/img/cercle1.svg"
@@ -4257,7 +4329,7 @@
                       <div class="row phoneView">
                         <div class="col-3 icon_rest">
                           <img
-                            src="/assest/travel-logo-golden.png"
+                            src="/assest/vtr-cars.png"
                             id="vtr-other"
                             class="img-responsive d-block mx-auto"
                             alt=""
@@ -4273,7 +4345,7 @@
                                 color: white;
                               "
                             >
-                              VTR TRAVEL & TOURISM
+                              VTR CARS
                             </h1>
                           </div>
                           <div class="mobile_title">
@@ -4298,14 +4370,14 @@
                                 ></div>
                               </div>
                             </h1>
-                            <p style="color: white">VTR TRAVEL & TOURISM</p>
+                            <p style="color: white">VTR CARS</p>
                           </div>
                         </div>
                       </div>
 
                       <div class="mobileView" style="margin-bottom: 30px; width: 100%; display: flex; flex-direction: column; gap: 10px; justify-content: center; align-items: center;">
-                        <img src="/assest/travel-logo-golden.png" style="width: 100px; " alt="">
-                        <p style="font-size: 25px; font-weight: 700; color: white;" >   VTR TRAVEL & TOURISM</p>
+                        <img src="/assest/vtr-cars.png" style="width: 100px; " alt="">
+                        <p style="font-size: 25px; font-weight: 700; color: white;" >   VTR CARS</p>
                    </div>
                     </div>
 
@@ -4325,7 +4397,7 @@
                           <img
                             class="img_100"
                             data-src="https://www.lebaroque.com/wp-content/uploads/2021/11/DSC03643.jpg"
-                            src="/assest/main-travel.jpg"
+                            src="/assest/vtr-cars/rent-classic-car-in-dubai.jpg"
                           />
                         </div>
                       </div>
@@ -4351,13 +4423,7 @@
                         <p></p>
                         <p>
                           <span style="font-size: 18px; color: white"
-                            >We've been creating unforgettable memories for
-                            tourists for over a decade and we're able to do what
-                            we do, as well as we've been doing it because we are
-                            anchored to our values and aligned on our mission.
-                            Providing MICE to stress–free & cost efficient
-                            customised packages. Explore dubai like never before
-                            with us.</span
+                            >VTR Cars offers Dubai’s most diverse car rental marketplace, featuring everything from budget-friendly economy vehicles to premium luxury, sports, and supercars. Each car is hand-selected and maintained in top condition, ensuring comfort, style, and performance. Whether you want affordability, prestige, or adrenaline, VTR Cars provides unmatched choice, flexible loyalty rewards, and new additions regularly—giving you freedom, speed, and an unforgettable driving experience without owning a car.</span
                           >
                         </p>
                       </div>
@@ -4441,7 +4507,7 @@
                             d="M10.5 43.5C10.834 35.0786 8.67465 26.3884 16.5 20.8087C22.3208 16.6583 20.5174 19.0815 29.5 16.5C37.509 14.1984 58.108 17.5567 68 16.5C76.0305 15.6422 84.5835 0.5385 93.5 0.500007C104.232 0.453675 114.492 9.63585 126 10.7747C133.765 11.5431 142.643 2.19283 150.55 3.50003C157.964 4.72582 159.774 14.8539 166 16.5C172.455 18.2068 183.781 8.68683 189 10.7747C195.172 13.2439 198.993 28.1076 203.5 31C210.521 35.5066 222.804 34.3355 226 39.5C230.305 46.4572 217.077 54.8073 215 62C213.359 67.6842 220.267 76.2702 215 81.4865C211.011 85.4373 203.41 83.0913 197.5 86.5C193.287 88.9304 189.163 98.9664 184 101C180.063 102.551 172.881 95.2191 168.5 96.5C162.062 98.3827 157.695 111.291 150.55 112.5C141.7 113.997 128.422 103.279 119 103.556C110.215 103.815 102.306 117.474 93.5 116.5C86.737 115.752 80.5356 105.119 74 103.556C64.5485 101.298 49.4435 107.71 41 103.556C33.9829 100.104 35.4227 86.3915 29.5 81.4865C23.9709 76.9073 10.2707 77.4557 5.99999 71.5C-0.770896 62.0579 10.2104 50.8012 10.5 43.5Z"
                             stroke="#FFF"
                             stroke-width="0.5"
-                          ></path></svg  ><a href="https://www.vtr-travels.com/">
+                          ></path></svg  ><a href="https://www.vtrcars.com/">
                           <label class="lab_gold">
                             <span
                               class="txt_btn"
@@ -4487,7 +4553,7 @@
                             >
                               <img
                                 class="swip_img"
-                                src="/assest/travel-s-1.jpg"
+                                src="/assest/vtr-cars/1.jpg"
                                 alt=""
                               />
                             </div>
@@ -4498,10 +4564,11 @@
                             >
                               <img
                                 class="swip_img"
-                                src="/assest/travel-s-2.jpg"
+                                src="/assest/vtr-cars/2.jpg"
                                 alt=""
                               />
                             </div>
+                            
                             <div
                               class="swiper-slide"
                               data-swiper-slide-index="1"
@@ -4509,10 +4576,12 @@
                             >
                               <img
                                 class="swip_img"
-                                src="/assest/travel-s-3.jpg"
+                                src="/assest/vtr-cars/service_02.jpg"
                                 alt=""
                               />
                             </div>
+                           ]
+                           
                           </div>
                           <span
                             class="swiper-notification"
@@ -4723,7 +4792,7 @@
                             <option value="VTR HOSPITALITY & EVENTS">VTR HOSPITALITY & EVENTS</option>
                             <option value="VTR INVESTMENT CONSULTANCY">VTR INVESTMENT CONSULTANCY</option>
                             <option value="VTR DEVELOPERS">VTR DEVELOPERS</option>
-                            <option value="VTR TRAVEL & TOUR">VTR TRAVEL & TOUR</option>
+                            <option value="VTR CARS">VTR CARS</option>
                           </select>
                          <div style="display: flex; justify-content: center; gap: 20px;">
                           <p
@@ -5734,9 +5803,9 @@
                                 </div></a>
                             </div>
                             <div class="col-6 col-lg-2">
-                                <a href="#vtr-travel"><div style=" display: flex;flex-direction: column; justify-content: center ; align-items: center;">
-                                     <img style="width:150px; height: 150px; margin: auto; border-radius: 10px;" src="/assest/main-travel.jpg" alt="">
-                                     <h5 style="color: white; text-align:center; margin-top: 8px;">VTR TRAVEL & TOURISM</h5>
+                                <a href="#vtr-cars"><div style=" display: flex;flex-direction: column; justify-content: center ; align-items: center;">
+                                     <img style="width:150px; height: 150px; margin: auto; border-radius: 10px;" src="/assest/vtr-cars/classic-vintage-car-in-dubai.jpg" alt="">
+                                     <h5 style="color: white; text-align:center; margin-top: 8px;">VTR CARS</h5>
                                 </div></a>
                             </div>
                         </div>
@@ -5750,8 +5819,8 @@
                          
                           <a href="">VTR Developer</a>
                           <a href="">VTR INVESTMENT CONSULTANCY</a>
-                          <a href="https://www.vtr-travels.com/"
-                          >VTR Travel & Tour</a>
+                          <a href="https://www.vtrcars.com/"
+                          >VTR CARS</a>
                         </div> -->
                         <div class="progress_foo">
                           <div class="progress-value"></div>
@@ -5835,11 +5904,11 @@
                               <a href=""><span class="">CONTACT: </span></a>
                             </li>
                             <li>
-                              <a href=""><span class="">+971 4 325 7114 </span></a>
+                              <a href=""><span class="">+971 527121964 </span></a>
                             </li>
                             <li>
                               <a href=""><span class=""> 
-                                info@vtr-group.ae
+                                support@vtr-group.ae 
                                  </span></a>
                             </li>
                           
@@ -6079,20 +6148,9 @@
       src="https://www.lebaroque.com/wp-content/themes/baroque/assets/js/app.min.js"
       id="baroque_theme-script-js"
     ></script>
-    <script
-      src="https://www.google.com/recaptcha/api.js?render=6LdexScjAAAAAFcl2gF5OYZEGiUGrekZwlDmWmFb&amp;ver=3.0"
-      id="google-recaptcha-js"
-    ></script>
-    <script id="wpcf7-recaptcha-js-extra">
-      var wpcf7_recaptcha = {
-        sitekey: "6LdexScjAAAAAFcl2gF5OYZEGiUGrekZwlDmWmFb",
-        actions: { homepage: "homepage", contactform: "contactform" },
-      };
-    </script>
-    <script
-      src="https://www.lebaroque.com/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.6"
-      id="wpcf7-recaptcha-js"
-    ></script>
+   
+  
+ 
     <script
       defer
       src="https://www.lebaroque.com/wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.8.10"
