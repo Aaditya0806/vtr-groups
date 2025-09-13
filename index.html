@@ -781,7 +781,7 @@
         display: none !important;
       }
       .menu_head ul {
-        grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr 2fr 1fr;
       }
       .menu_head {
         width: 100vw;
@@ -829,6 +829,45 @@
   opacity: 1;
 }
       }
+
+      /* The overlay */
+.popup {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* transparent black */
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The white box */
+.popup-content {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+/* Close button */
+.close-popup {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size:30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
     </style>
     <header class="globNav" style="position: relative;">
       <div class="fluid-container">
@@ -894,6 +933,11 @@
             </li>
             <li class="link_head">
               <div>
+                <a href="" id="openPopup" > SCHEDULE AN APPOINTMENT  </a>
+              </div>
+            </li>
+            <li class="link_head">
+              <div>
                 <a href="#our-awards"> Awards & Achievements </a>
               </div>
             </li>
@@ -927,6 +971,189 @@
 
                  
     </header>
+    <!-- Popup / Modal -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <button class="close-popup" id="closePopup">&times;</button>
+    <div class="container_95 nopad_mobile">
+                  <div class="row align-items-center justify-content-center">
+                    
+                    <div
+                      class="col-md-12 col-lg-12 right_black wow fadeInUp"
+                      data-wow-duration="1s "
+                      data-wow-delay=".5s "
+                      style="
+                        visibility: visible;
+                        animation-duration: 1s;
+                        animation-delay: 0.5s;
+                        animation-name: fadeInUp;
+                      "
+                    >
+                      <div class="m-auto" style="max-width: 500px; width: 100%">
+                       
+                        <h1
+                          style="
+                            color: white;
+                            opacity: 1;
+                            visibility: inherit;
+                            margin-bottom: 50px;
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-size: 25px;
+                          "
+                        >
+                          
+SCHEDULE AN APPOINTMENT
+                        </h1>
+                    <form id="career-form">
+                        <div
+                          style="
+                            flex-direction: column;
+                            display: flex;
+                            justify-content: center;
+                            margin: auto;
+                            gap: 10px;
+                            width: 100%;
+                          "
+                        >
+                          <input
+                            type="text"
+                            style="
+                              width: 100%;
+                              height: 40px;
+                              border-color: #ffffff;
+                              border: 2px solid #ffffff;
+                              border-radius: 5px;
+                            "
+                            id="name2"
+                            placeholder="Name"
+                          />
+                          <input
+                            type="text"
+                            style="
+                              width: 100%;
+                              height: 40px;
+                              border-color: #ffffff;
+                              border: 2px solid #ffffff;
+                              border-radius: 5px;
+                            "
+                            id="email2"
+                            placeholder="Email"
+                          />
+                          <input
+                            type="number"
+                            style="
+                              width: 100%;
+                              height: 40px;
+                              border-color: #ffffff;
+                              border: 2px solid #ffffff;
+                              border-radius: 5px;
+                            "
+                            id="phone"
+                            placeholder="Phone Number"
+                          />
+                        
+                       
+                        
+                        </div>
+                    <div style="width: 100%;height: 25px;">
+                          <p id="alert-msg" style="font-size: 18px;">
+                            ✓ Email sent successfully </p>
+                    </div>
+                        <button  style="background-color: transparent;" class="gold_btn">
+                          <svg
+                            width="220"
+                            height="107"
+                            class="turb1"
+                            viewBox="0 0 220 107"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10.2267 63.5947C-28.0237 10.2538 56.9843 -8.88692 145.55 5.75558C229.487 19.6329 236.049 62.5135 192.617 87.5657C149.185 112.618 49.6958 118.635 10.2267 63.5947Z"
+                              stroke="#FFF"
+                              stroke-width="0.5"
+                              class="path"
+                            ></path></svg   ><svg
+                            width="221"
+                            height="105"
+                            class="turb2"
+                            viewBox="0 0 221 105"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="transform: translate(0px, 0px); opacity: 1"
+                          >
+                            <path
+                              d="M11.9283 69.3442C-29.207 18.9566 54.7045 -6.34096 144.013 1.785C228.655 9.48632 237.552 51.7607 195.513 79.9134C153.473 108.066 54.3743 121.337 11.9283 69.3442Z"
+                              stroke="#FFF"
+                              stroke-width="0.5"
+                            ></path></svg  ><svg
+                            width="220"
+                            height="106"
+                            class="turb3"
+                            viewBox="0 0 220 106"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="transform: translate(0px, 0px); opacity: 1"
+                          >
+                            <path
+                              d="M10.4919 66.5743C-29.1908 14.65 55.3941 -7.44318 144.425 4.07413C228.803 14.9896 236.494 57.5792 193.678 84.1182C150.862 110.657 51.4392 120.153 10.4919 66.5743Z"
+                              stroke="#FFF"
+                              stroke-width="0.5"
+                            ></path></svg  ><svg
+                            width="221"
+                            height="107"
+                            class="turb4"
+                            viewBox="0 0 221 107"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="transform: translate(0px, 0px); opacity: 1"
+                          >
+                            <path
+                              d="M12.428 73.8039C-30.0082 24.8803 53.2016 -3.34528 142.682 1.64835C227.486 6.38102 237.486 48.3244 196.204 77.937C154.922 107.55 56.2165 124.286 12.428 73.8039Z"
+                              stroke="#FFF"
+                              stroke-width="0.5"
+                            ></path></svg  ><label class="lab_gold">
+                            <span
+                              class="txt_btn"
+                              id="career-submit2"
+                              style="opacity: 1; transform: translate(0px, 0px)"
+                              >Send</span
+                            >
+                          </label>
+                        </button>
+                      </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  </div>
+</div>
+<script>
+  const openPopupBtn = document.getElementById("openPopup");
+  const closePopupBtn = document.getElementById("closePopup");
+  const popup = document.getElementById("popup");
+
+  openPopupBtn.addEventListener("click", function (e) {
+    e.preventDefault(); // stop link from navigating
+    popup.style.display = "flex"; // show popup (flex centers content)
+    document.body.style.overflow = "hidden"; // optional: disable page scroll
+  });
+
+  closePopupBtn.addEventListener("click", function () {
+    popup.style.display = "none";
+    document.body.style.overflow = "auto";
+  });
+
+  // also close when clicking outside the popup-content
+  popup.addEventListener("click", function (e) {
+    if (e.target === popup) {
+      popup.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+</script>
+
     <!--custom navigation header !-->
 
     <nav class="custom-menu" id="custom-menu">
@@ -5326,6 +5553,158 @@
                         <div class="btn_card" id="contact-us" style="opacity: 1;">
                           <a class="link_card_news" href="#firstEdition"> </a
                           ><a class="btn_section" target="_blank " href="#firstEdition">
+                            <span class="btn_card">
+                              <span
+                                class="text_btn"
+                                data-no-translation=""
+                                data-trp-gettext=""
+                                >explore more</span
+                              >
+                              <span class="arrows_btn">
+                                <span class="icons">
+                                  <svg
+                                    width="16"
+                                    height="16"
+                                    class="arrow_svg"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path d="M2.5 8H13.5" stroke="#FFF"></path>
+                                    <path
+                                      d="M9 3.5L13.5 8L9 12.5"
+                                      stroke="#FFF"
+                                    ></path></svg ><svg
+                                    width="16"
+                                    height="16"
+                                    class="arrow_svg"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path d="M2.5 8H13.5" stroke="#FFF"></path>
+                                    <path
+                                      d="M9 3.5L13.5 8L9 12.5"
+                                      stroke="#FFF"
+                                    ></path></svg  ></span>
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+
+
+                      <div
+                        class="col-md-4 col-lg-4 item_news wow fadeInUp"
+                        data-wow-duration="1s"
+                        data-wow-delay=".5s"
+                        style="
+                          visibility: visible;
+                          animation-duration: 1s;
+                          animation-delay: 0.5s;
+                          animation-name: fadeInUp;
+                        "
+                      >
+                        <a style="text-decoration: none;" class="link_card_news" target="_blank" href="https://www.instagram.com/p/DJosoW2TQh7/?igsh=MWRpZWxwaDB0NmNoaQ%3D%3D">
+                          <div class="card_news">
+                            <div class="reveal animating">
+                              <div class="image-wrap">
+                                <img
+                                  class="img_100"
+                                  data-src="/assest/blog-1.jpg"
+                                  alt="GIMS – LIVE SHOW"
+                                  style="object-fit: cover"
+                                  src="/assest/blog-2.png"
+                                />
+                              </div>
+                              <!-- <label class="badge_news"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                 Edition                                                    </font></font></label> -->
+                            </div>
+                          </div>
+                          <!-- <label class="date_event">February 27, 2025</label> -->
+                          <h3>Presenting the crème de la crème of Dubai’s food, beverage, and hospitality scene
+                          </h3>
+                          <!-- <p>Blog Details</p> -->
+                        </a>
+                        <div class="btn_card" id="contact-us" style="opacity: 1;">
+                          <a class="link_card_news" href="https://www.instagram.com/p/DJosoW2TQh7/?igsh=MWRpZWxwaDB0NmNoaQ%3D%3D"> </a
+                          ><a class="btn_section" target="_blank " href="https://www.instagram.com/p/DJosoW2TQh7/?igsh=MWRpZWxwaDB0NmNoaQ%3D%3D">
+                            <span class="btn_card">
+                              <span
+                                class="text_btn"
+                                data-no-translation=""
+                                data-trp-gettext=""
+                                >explore more</span
+                              >
+                              <span class="arrows_btn">
+                                <span class="icons">
+                                  <svg
+                                    width="16"
+                                    height="16"
+                                    class="arrow_svg"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path d="M2.5 8H13.5" stroke="#FFF"></path>
+                                    <path
+                                      d="M9 3.5L13.5 8L9 12.5"
+                                      stroke="#FFF"
+                                    ></path></svg ><svg
+                                    width="16"
+                                    height="16"
+                                    class="arrow_svg"
+                                    viewBox="0 0 16 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path d="M2.5 8H13.5" stroke="#FFF"></path>
+                                    <path
+                                      d="M9 3.5L13.5 8L9 12.5"
+                                      stroke="#FFF"
+                                    ></path></svg  ></span>
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+
+
+                      <div
+                        class="col-md-4 col-lg-4 item_news wow fadeInUp"
+                        data-wow-duration="1s"
+                        data-wow-delay=".5s"
+                        style="
+                          visibility: visible;
+                          animation-duration: 1s;
+                          animation-delay: 0.5s;
+                          animation-name: fadeInUp;
+                        "
+                      >
+                        <a style="text-decoration: none;" class="link_card_news" target="_blank" href="/assest/IAA2025AWARDS.pdf">
+                          <div class="card_news">
+                            <div class="reveal animating">
+                              <div class="image-wrap">
+                                <img
+                                  class="img_100"
+                                  data-src="/assest/blog-1.jpg"
+                                  alt="GIMS – LIVE SHOW"
+                                  style="object-fit: cover"
+                                  src="/assest/blog-3.png"
+                                />
+                              </div>
+                              <!-- <label class="badge_news"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                 Edition                                                    </font></font></label> -->
+                            </div>
+                          </div>
+                          <!-- <label class="date_event">February 27, 2025</label> -->
+                          <h3>INTERNATIONAL ACHIEVER AWARDS 2025
+                          </h3>
+                          <!-- <p>Blog Details</p> -->
+                        </a>
+                        <div class="btn_card" id="contact-us" style="opacity: 1;">
+                          <a class="link_card_news" href="/assest/IAA2025AWARDS.pdf"> </a
+                          ><a class="btn_section" target="_blank " href="/assest/IAA2025AWARDS.pdf">
                             <span class="btn_card">
                               <span
                                 class="text_btn"
