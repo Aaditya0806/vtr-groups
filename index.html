@@ -812,9 +812,68 @@
       #vtr-group-text{
         margin-top: 0px;
       }
+      #scanner{
+        width: 200px; margin-right: 90px;
+      }
+      #address-div{
+         display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          padding: 20px;
+          text-align: left;
+      }
+      #main-address-div{
+       width: 90%;
+          display: flex;
+          flex-wrap: wrap;
+         justify-content: space-between;
+          padding: 20px;
+          text-align: left;
+      }
+      #address-div2{
+        display: flex; justify-content: space-between; gap: 50px;
+      }
+      .footer-para{
+        color: #d2af4d !important;
+      }
+      .footer-icon{
+        width: 50px;
+        height: 50px;
+      }
+       #address-div2 div{
+        align-items: center;
+       }
       @media (max-width: 768px) {
               #imgMainDiv{
         width: 200px;
+      }
+      .footer-icon{
+        width: 50px;
+        height: 50px;
+      }
+       #main-address-div{
+       width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+                justify-content: center;
+       
+      }
+      
+      #address-div2{
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      }
+        #address-div{
+          justify-content: center;
+         display: flex;
+          flex-wrap: wrap;
+         
+          padding: 20px;
+          text-align: left;
+      }
+       #scanner{
+        margin-right: 0px;
       }
        #vtr-group-text{
         margin-top: 0px;
@@ -885,9 +944,9 @@
 
       
       <div style="background-color: #d2af4d; width: 100%; display: flex ; justify-content: right; gap: 10px;  padding: 0px 10px; position: absolute ; top: 0; right: 0;">
-        <p style="margin-bottom: 0; font-size: 14px;">Contact Us: +971 527121964
+        <p style="margin-bottom: 0; font-size: 13px;">Contact Us: +971 527121964
 </p>
-        <p style="margin-bottom: 0; font-size: 14px;">Email: support@vtr-group.ae</p>
+        <p style="margin-bottom: 0; font-size: 13px;">Email: support@vtr-group.ae</p>
       </div>
       </div>
       <div class="fluid-container">
@@ -6239,66 +6298,59 @@ moments.
           <img src="/assest/logo/VTR GROUP LOGO_Gold.png" alt="" style="width: 150px">
         </h1>
       </div> -->
-      <div style="
-      width: 90%;
-          display: flex;
-         justify-content: space-between;
-          padding: 20px;
-          text-align: left;
+      <div id="main-address-div" style="
+      
         
         ">
-        <div  style="
-          display: flex;
-          flex-direction: column;
-          padding: 20px;
-          text-align: left;
+        <div id="address-div" style="
+         
           
         " >
   <p class="footer-para" style="
             color: white;
-            font-size: 16px;
+            font-size: 18px;
             
             margin-bottom: 10px;
             font-family: 'Roboto', Arial, sans-serif;
           ">
-         <span style="font-size: 22px; font-weight: 900px;">Address:</span>  <br>  Park Place Tower - Bldg Dubai World Trade Centre - Office no 1203 Sheikh Zayed Rd - Dubai
+         <span style="font-size: 22px; font-weight: 900px;">Address:</span>   Park Place Tower - Bldg Dubai World Trade Centre - Office no 1203 Sheikh Zayed Rd - Dubai
         </p>
        <br>
-       <br>
-        <div style="display: flex; justify-content: space-between; gap: 50px;">
-          
-        <p class="footer-para" style="
-            color: white;
-            font-size: 16px;
+       <br>        <div id="address-div2"  style="">
+
+        <div style="display: flex; gap: 20px;">
+          <img class="footer-icon"  src="/assest/landline.png" alt="">
+           <div  class="footer-para" style="display: flex; flex-direction: column; justify-content: start; align-items: start; ">
+         <p style="font-size: 22px; font-weight: 900px; margin-top: 10px;">Landline:</p>  <p style="font-size: 18px;
             
             margin-bottom: 10px;
-            font-family: 'Roboto', Arial, sans-serif;
-          ">
-         <span style="font-size: 22px; font-weight: 900px;">Landline:</span>  <br>  043257114 
-        </p>
-         <p class="footer-para" style="
-            color: white;
-            font-size: 16px;
+            font-family: 'Roboto', Arial, sans-serif;">+971 043257114 </p>
+        </div>
+        </div>  
+        <div style="display: flex; gap: 20px;">
+          <img class="footer-icon" src="/assest/whatsapp.png" alt="">
+           <div  class="footer-para" style="display: flex; flex-direction: column; justify-content: start; align-items: start; ">
+         <p style="font-size: 22px; font-weight: 900px; margin-top: 10px;">Mobile:</p>  <p style="font-size: 18px;
             
             margin-bottom: 10px;
-            font-family: 'Roboto', Arial, sans-serif;
-          ">
-         <span style="font-size: 22px; font-weight: 900px;">Mobile:</span>  <br>  +971 527121964
-        </p>
-        <p class="footer-para" style="
-            color: white;
-            font-size: 16px;
+            font-family: 'Roboto', Arial, sans-serif;"> +971 527121964 </p>
+        </div>
+        </div>  
+        <div style="display: flex; gap: 20px;">
+          <img class="footer-icon"  src="/assest/service-call.png" alt="">
+           <div  class="footer-para" style="display: flex; flex-direction: column; justify-content: start;align-items: start; ">
+         <p style="font-size: 22px; font-weight: 900px; margin-top: 10px;">Email:</p>  <p style="font-size: 18px;
             
             margin-bottom: 10px;
-            font-family: 'Roboto', Arial, sans-serif;
-          ">
-         <span style="font-size: 22px; font-weight: 900px;">Email:</span>  <br>  support@vtr-group.ae 
-        </p>
+            font-family: 'Roboto', Arial, sans-serif;">support@vtr-group.ae </p>
+        </div>
+        </div>  
+       
         </div>
         </div>
       
         <div>
-          <img style="width: 300px;" src="/assest/location-scan.png" alt="">
+          <img id="scanner" style="" src="/assest/location-scan.png" alt="">
         </div>
 
       
